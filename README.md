@@ -7,6 +7,9 @@
             
 <p>Link de los diagramas: <a href="https://app.diagrams.net/#G1n1ls2s8rsJFBCI1qRZH6_i9gLpa4ic9S">Diagramas ddd.</a></p>
 
+<img src="https://i.postimg.cc/VsZyyG0Y/ddd-reto-Analisis-drawio.png" width="500" title="hover text"/>
+<img src="https://i.postimg.cc/3Jks3X22/ddd-reto-Modelo-de-dominio-drawio.png" width="500" title="hover text"/>
+
 <h2>Implemtación modelo de dominio</h2>
 <p>Es implentá: 
   <ul>
