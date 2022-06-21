@@ -33,4 +33,4 @@
 </p>
 
 <h2>Caso de uso</h2>
-<p>Se creó los casos de usos de los agreagdos compra y canal con sus respectivos test</p>
+<p>Se creó casos de usos de los agreagdos compra, canal y cuenta con sus respectivos test./p>
