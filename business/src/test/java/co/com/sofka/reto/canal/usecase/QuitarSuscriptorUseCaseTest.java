@@ -52,9 +52,10 @@ class QuitarSuscriptorUseCaseTest {
         return List.of(
                 new CanalCreado(comunidad,descripcion),
                 new SuscriptorAgregado(
+                        CanalId.of("Canal1"),
                         SuscriptorId.of("Suscriptor1"),
                         new SuscriptorTipo(SuscriptorTipo.Tipos.PREMIUN),
-                        CanalId.of("Canal1")
+                        CanalId.of("CanalSuscriptor1")
                 )
         );
     }

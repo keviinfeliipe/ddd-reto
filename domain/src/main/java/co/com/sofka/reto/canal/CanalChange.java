@@ -16,7 +16,7 @@ public class CanalChange extends EventChange {
 
         apply((VideoAgregado event)-> canal.videos.add(new Video(event.getVideoId(),event.getCategoria(),event.getMultimedia())));
 
-        apply((SuscriptorAgregado event)-> canal.suscriptores.add(new Suscriptor(event.getSuscriptorId(),event.getTipo(),event.getCanalId())));
+        apply((SuscriptorAgregado event)-> canal.suscriptores.add(new Suscriptor(event.getCanalId(),event.getSuscriptorId(),event.getTipo(),event.getCanalSuscriptorId())));
 
         apply((VideoQuitado event)->{
             var video = canal

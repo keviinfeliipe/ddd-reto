@@ -11,12 +11,18 @@ public class SuscriptorAgregado extends DomainEvent {
     private final SuscriptorId suscriptorId;
     private final SuscriptorTipo tipo;
     private final CanalId canalId;
+    private final CanalId canalSuscriptorId;
 
-    public SuscriptorAgregado(SuscriptorId suscriptorId, SuscriptorTipo tipo, CanalId canalId) {
+    public SuscriptorAgregado(CanalId canalId,SuscriptorId suscriptorId, SuscriptorTipo tipo, CanalId canalSuscriptorId) {
         super("sofka.canal.SuscriptorAgregado");
         this.suscriptorId = suscriptorId;
         this.tipo = tipo;
         this.canalId = canalId;
+        this.canalSuscriptorId = canalSuscriptorId;
+    }
+
+    public CanalId getCanalSuscriptorId() {
+        return canalSuscriptorId;
     }
 
     public SuscriptorId getSuscriptorId() {

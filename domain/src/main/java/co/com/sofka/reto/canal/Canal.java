@@ -75,7 +75,7 @@ public class Canal extends AggregateEvent<CanalId> {
         factory.suscriptores()
                 .forEach(suscriptor ->
                         appendChange(
-                                new SuscriptorAgregado( suscriptor.identity(),suscriptor.tipo(),suscriptor.canalId())
+                                new SuscriptorAgregado( suscriptor.canalId(),suscriptor.identity(),suscriptor.tipo(),suscriptor.canalSuscriptorId())
                         ).apply());
     }
 
@@ -88,7 +88,5 @@ public class Canal extends AggregateEvent<CanalId> {
         Objects.requireNonNull(descripcion);
         appendChange(new DescripcionCambiada(descripcion)).apply();
     }
-
-
 
 }

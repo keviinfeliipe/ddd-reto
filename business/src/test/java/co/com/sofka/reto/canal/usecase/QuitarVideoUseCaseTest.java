@@ -56,10 +56,10 @@ class QuitarVideoUseCaseTest {
                         new VideoCategoria("Educativo"),
                         new VideoMultimedia("xxxxxxx")
                 ),
-                new SuscriptorAgregado(
-                        SuscriptorId.of("Suscriptor1"),
-                        new SuscriptorTipo(SuscriptorTipo.Tipos.PREMIUN),
-                        CanalId.of("Canal1")
+                new VideoAgregado(
+                        VideoId.of("Video2"),
+                        new VideoCategoria("Educativo"),
+                        new VideoMultimedia("xxxxxxx")
                 )
         );
     }

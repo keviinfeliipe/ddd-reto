@@ -24,8 +24,8 @@ public class SuscriptorFactory {
         return instance;
     }
 
-    public SuscriptorFactory add(SuscriptorId suscriptorId, SuscriptorTipo tipo, CanalId canalId){
-        suscriptores.add(new Suscriptor(suscriptorId,tipo,canalId));
+    public SuscriptorFactory add(CanalId canalId,SuscriptorId suscriptorId, SuscriptorTipo tipo, CanalId canalSuscriptorId){
+        suscriptores.add(new Suscriptor(canalId,suscriptorId,tipo,canalSuscriptorId));
         return this;
     }
 

@@ -32,10 +32,12 @@ class AgregarSuscriptorUseCaseTest {
         CanalId canalId = new CanalId();
         SuscriptorFactory factory = SuscriptorFactory.getInstance()
                 .add(
+                        CanalId.of("Canal1"),
                         SuscriptorId.of("Suscriptor1"),
                         new SuscriptorTipo(SuscriptorTipo.Tipos.BASIC),
                         CanalId.of("CanalSuscriptor1")
                 ).add(
+                        CanalId.of("Canal1"),
                         SuscriptorId.of("Suscriptor2"),
                         new SuscriptorTipo(SuscriptorTipo.Tipos.PREMIUN),
                         CanalId.of("CanalSuscriptor2")

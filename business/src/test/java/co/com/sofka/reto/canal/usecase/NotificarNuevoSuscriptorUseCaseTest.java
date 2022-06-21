@@ -3,9 +3,11 @@ package co.com.sofka.reto.canal.usecase;
 import co.com.sofka.business.generic.ServiceBuilder;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.TriggeredEvent;
-import co.com.sofka.reto.canal.SuscriptorNuevoNotificado;
+import co.com.sofka.reto.canal.event.SuscriptorAgregado;
 import co.com.sofka.reto.canal.service.EnviarNotificacionService;
 import co.com.sofka.reto.canal.value.CanalId;
+import co.com.sofka.reto.canal.value.SuscriptorId;
+import co.com.sofka.reto.canal.value.SuscriptorTipo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,8 +28,11 @@ class NotificarNuevoSuscriptorUseCaseTest {
     @Test
     public void enviarCoreo() {
         //Arrange
-        CanalId canalId = CanalId.of("Canal1");
-        var evento = new SuscriptorNuevoNotificado(canalId);
+        var canalId= CanalId.of("Canal1");
+        var suscriptorId= SuscriptorId.of("Suscriptor1");
+        var tipo = new SuscriptorTipo(SuscriptorTipo.Tipos.BASIC);
+        var canalSuscriptorId =CanalId.of("CanalSuscriptor1");
+        var evento = new SuscriptorAgregado(canalId,suscriptorId,tipo,canalSuscriptorId);
         doNothing().when(service).enviarNotificacion(any(), any());
         useCase.addServiceBuilder(new ServiceBuilder().addService(service));
         //Act
